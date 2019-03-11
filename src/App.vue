@@ -1,28 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view v-if="isHtml" />
+    <template v-if="!isHtml">
+      <top-header />
+      <div class="main">
+        <sidebar />
+        <div class="content">
+          <router-view />
+        </div>
+      </div>
+      <footer-bar />
+    </template>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import topHeader from '@/components/header'
+import sidebar from '@/components/sidebar'
+import footerBar from '@/components/footer'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    topHeader,
+    sidebar,
+    footerBar
+  },
+  data() {
+    return {}
+  },
+  computed: {
+    isHtml() {
+      return this.$store.state.isHtml
+    }
   }
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+.content {
+  margin: 55px 0 0 260px;
+  padding: 30px 20px;
 }
 </style>

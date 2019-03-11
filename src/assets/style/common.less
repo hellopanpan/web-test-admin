@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eee;
+}
+
+// 上划线
+.border-top {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -50%;
+    top: 0;
+    width: 200%;
+    transform: scale(0.5);
+    border-bottom: 1px solid #efefef;
+  }
+}
+// 下划线
+.border-bottom {
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -50%;
+    bottom: 0;
+    width: 200%;
+    transform: scale(0.5);
+    border-bottom: 1px solid #efefef;
+  }
+}
+
+.module-header {
+  font-size: 22px;
+  color: #666;
+  line-height: 40px;
+  border: 1px solid #eee;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  background: #fff;
+  padding: 10px 10px;
+}
+
+.card {
+  background: #fff;
+  margin-bottom: 30px;
+  border: 1px solid #eee;
+  // box-shadow: 0 0 15px rgba(80, 80, 80, 0.1);
+}
+
+.block {
+  display: block;
+  width: 100%;
+}
+.short-input {
+  width: 260px;
+}
+.page-box {
+  text-align: center;
+  margin: 30px auto;
+}
