@@ -22,3 +22,17 @@ export const addList = (params) => {
     data: params
   })
 }
+// 更新list
+export const updateList = (params) => {
+  return fetch({
+    url: `/admin/pages/update`,
+    data: params
+  })
+}
+// 更新list
+export const removeList = (params) => {
+  return fetch({
+    url: `/admin/pages/remove`,
+    data: params
+  })
+}
