@@ -4,7 +4,9 @@
     <template v-if="!isHtml">
       <top-header />
       <div class="main">
-        <sidebar />
+        <div class="left">
+          <sidebar />
+        </div>
         <div class="content">
           <router-view />
         </div>
@@ -44,5 +46,14 @@ export default {
 .content {
   margin: 55px 0 0 260px;
   padding: 30px 20px;
+}
+@media only screen and (max-width: 1199px){
+  .left{
+    display: none;
+  }
+  .content {
+    margin: 55px 0 0 0px;
+    padding: 30px 20px;
+  }
 }
 </style>

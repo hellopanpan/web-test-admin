@@ -1,19 +1,19 @@
 <template>
   <div class="home">
+    <add-cont ref="addcont"/>
     <h4 class="module-header">查询</h4>
     <h4 class="module-header">结果</h4>
-    <div class="cont">
-      <ul>
-        <li v-for="(item, index) in list" :key="item.id">
-          {{index}} --> {{item.name}} ---> {{item.age}} 
-        </li>
-      </ul>
+    <el-button class="add" @click.stop="addit">add</el-button>
+    <div class="card">
+      <Content :list="list" />
     </div>
   </div>
 </template>
 
 <script>
 import * as api from "@/api"
+import addCont from '@/components/addCont.vue'
+import Content from '@/components/content.vue'
 export default {
   name: 'index',
   data() {
@@ -21,10 +21,17 @@ export default {
       list: []
     }
   },
+  components:{
+    addCont,
+    Content
+  },
   mounted() {
     this.getList(true)
   },
   methods: {
+    addit() {
+      this.$refs.addcont.open()
+    },
     // 获取视频列表 ,flag 为true，更新整个list
     getList(flag) {
       api.getOrderList().then(res => {

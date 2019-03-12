@@ -33,7 +33,7 @@ const fetch = options => {
           console.log('未登录')
           localStorage.removeItem('token')
           localStorage.removeItem('userId')
-          // location.href = location.protocol + '//' + location.host + '/#/html/login'
+          location.href = location.protocol + '//' + location.host + '/#/login'
         } else {
           reject(res.data)
         }

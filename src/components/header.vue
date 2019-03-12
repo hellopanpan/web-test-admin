@@ -20,8 +20,8 @@ export default {
   },
   methods: {
     logout() {
-      localStorage.removeItem('token')
-      localStorage.removeItem('userId')
+      debugger
+      document.cookie = ''
       this.$router.push('/login')
     }
     // getUserInfo() {
