@@ -3,7 +3,7 @@ import fetch from '@/lib/fetch'
 //  获取page列表
 export const getOrderList = (params) => {
   return fetch({
-    url: `/webtestadmin/pages/`,
+    url: `/webtest/pages/`,
     params: params,
     method: 'GET'
   })
@@ -11,35 +11,35 @@ export const getOrderList = (params) => {
 //  登录
 export const userLogin = (params) => {
   return fetch({
-    url: `/webtestadmin/users/login`,
+    url: `/webtest/users/login`,
     data: params,
   })
 }
 // 增加page list
 export const addList = (params) => {
   return fetch({
-    url: `/webtestadmin/pages/add`,
+    url: `/webtest/pages/add`,
     data: params
   })
 }
 // 更新list
 export const updateList = (params) => {
   return fetch({
-    url: `/webtestadmin/pages/update`,
+    url: `/webtest/pages/update`,
     data: params
   })
 }
 // 更新list
 export const removeList = (params) => {
   return fetch({
-    url: `/webtestadmin/pages/remove`,
+    url: `/webtest/pages/remove`,
     data: params
   })
 }
 // 获取图片列表
 export const getPicList = () => {
   return fetch({
-    url: `/webtestadmin/post/pic`,
+    url: `/webtest/post/pic`,
     method: "GET"
   })
 }
@@ -47,7 +47,7 @@ export const getPicList = () => {
 
 export const removepic = (params) => {
   return fetch({
-    url: `/webtestadmin/post/remove`,
+    url: `/webtest/post/remove`,
     data: params
   })
 }
