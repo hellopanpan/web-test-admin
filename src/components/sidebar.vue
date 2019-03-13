@@ -48,7 +48,16 @@ export default {
       navList: [{
         name: '商品管理',
         path: '/index',
-        icon: 'tickets'
+        icon: 'tickets',
+        children: [{
+          name: '商品管理01',
+          path: '/index'
+        }]
+      },
+      {
+        name: '图片管理',
+        path: '/pic',
+        icon: 'menu'
       }]
     }
   }

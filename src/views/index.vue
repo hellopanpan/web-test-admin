@@ -13,8 +13,8 @@
       </div>
     </div>
     <h4 class="module-header">Result
-      <el-button class="add" type="primary" size="mini" @click.stop="addit">add</el-button>
-      <el-button class="remove" type="primary" size="mini" @click.stop="remove">remove</el-button>
+      <el-button class="add" type="primary" size="mini" @click.stop="addit">Add New</el-button>
+      <el-button class="remove" type="primary" size="mini" @click.stop="remove">Remove</el-button>
     </h4>
     <div class="card">
       <Content :list="list" @edit='edit' @select="select"/>
@@ -44,7 +44,8 @@ export default {
       pageSize: 10,
       total: 14,
       currentPage: 1,
-      selectArr: []
+      selectArr: [],
+      imageUrl: ''
     }
   },
   components:{
@@ -121,7 +122,7 @@ export default {
     }
     .remove{
       position: absolute;
-      left: 160px;
+      left: 190px;
       top: 16px;
     }
   }

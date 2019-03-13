@@ -1,4 +1,4 @@
-const devProxy = ['/admin'];  // 代理路径前缀
+const devProxy = ['/admin', 'public'];  // 代理路径前缀
 var proxyConfig = require('./config')
 const env = process.env.NODE_ENV;
 let target = '';
@@ -19,7 +19,7 @@ devProxy.forEach((value, index) => {
         pathRequiresRewrite: {
           [`^${value}`]: ''
         },
-        pathRewrite: {'^/admin' : ''},
+        pathRewrite: {[`^${value}`] : ''},
         onProxyReq: function(proxyReq, req, res) {
           // proxyReq.setHeader('cookie', proxyConfig.cookie)
           // proxyReq.setHeader('Authorization', proxyConfig.Authorization)

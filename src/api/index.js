@@ -36,3 +36,18 @@ export const removeList = (params) => {
     data: params
   })
 }
+// 获取图片列表
+export const getPicList = () => {
+  return fetch({
+    url: `/admin/post/pic`,
+    method: "GET"
+  })
+}
+// 移除图片
+
+export const removepic = (params) => {
+  return fetch({
+    url: `/admin/post/remove`,
+    data: params
+  })
+}
