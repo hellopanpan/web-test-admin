@@ -31,8 +31,9 @@ module.exports = {
   devServer: {
     proxy: proxyObj
   },
+  outputDir: 'dist',
   assetsDir: 'statics',
-    filenameHashing: false,
-    productionSourceMap: false,
-    lintOnSave: undefined
+  filenameHashing: false,
+  productionSourceMap: false,
+  lintOnSave: undefined
 }
