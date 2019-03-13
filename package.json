@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
+    "pm2-web": "pm2 start npm --name web_test_cnd --watch -- run start",
+    "start": "node app.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
