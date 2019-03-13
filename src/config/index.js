@@ -1,4 +1,4 @@
 export default {
-  staticPath: '/admin/images/',
+  staticPath: '/webtestadmin/images/',
   static: 'http://localhost:3001/images/'
 }

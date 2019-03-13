@@ -1,4 +1,4 @@
-const devProxy = ['/admin', 'public'];  // 代理路径前缀
+const devProxy = ['/webtestadmin', 'public'];  // 代理路径前缀
 var proxyConfig = require('./config')
 const env = process.env.NODE_ENV;
 let target = '';

@@ -2,7 +2,7 @@
   <div class="pic">
     <el-upload
       class="upload-demo"
-      action="admin/post/"
+      action="/webtestadmin/post/"
       multiple
       :on-success="success"
       :before-upload="beforeAvatarUpload"
