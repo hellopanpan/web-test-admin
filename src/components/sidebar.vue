@@ -46,13 +46,9 @@ export default {
   data() {
     return {
       navList: [{
-        name: '商品管理',
+        name: '页面管理',
         path: '/index',
-        icon: 'tickets',
-        children: [{
-          name: '商品管理01',
-          path: '/index'
-        }]
+        icon: 'tickets'
       },
       {
         name: '图片管理',

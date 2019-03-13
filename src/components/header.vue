@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="left">商品管理后台</div>
+    <div class="left">web Test 管理后台</div>
     <div class="right">
       <div class="pull-right"><span class="text" v-show="info.username">你好，{{info.username}}</span><el-button @click="logout" title="退出" size="mini" type="danger" circle><i class="iconfont icon-shutdown"></i></el-button></div>
     </div>
@@ -20,7 +20,6 @@ export default {
   },
   methods: {
     logout() {
-      debugger
       document.cookie = ''
       this.$router.push('/login')
     }

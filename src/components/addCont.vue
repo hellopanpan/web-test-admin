@@ -6,7 +6,14 @@
         <el-input v-model="form.title" autocomplete="off"></el-input>
       </el-form-item>
       <el-form-item label="type" >
-        <el-input v-model="form.type" autocomplete="off"></el-input>
+        <el-select v-model="form.type" clearable placeholder="请选择">
+          <el-option
+            v-for="item in options"
+            :key="item.value"
+            :label="item.lable"
+            :value="item.value">
+          </el-option>
+        </el-select>
       </el-form-item>
       <el-form-item label="text">
         <el-input type="textarea" rows="10" v-model="form.text"></el-input>
@@ -40,7 +47,27 @@ export default {
     return {
       dialogFormVisible: false,
       form: {},
-      editflag: false
+      editflag: false,
+      options: [{
+        lable: 'html',
+        value: 0
+      },
+      {
+        lable: 'css',
+        value: 1
+      },
+      {
+        lable: 'js',
+        value: 2
+      },
+      {
+        lable: 'vue',
+        value: 3
+      },
+      {
+        lable: 'react',
+        value: 4
+      }]
     }
   },
   methods: {
@@ -74,7 +101,7 @@ export default {
     },
     submit() {
       let reg = /^\d+$/
-      if(!(reg.test(this.form.learn) && reg.test(this.form.learn) && reg.test(this.form.comment))) {
+      if(!(reg.test(this.form.learn) && reg.test(this.form.learn) && reg.test(this.form.type) && reg.test(this.form.comment))) {
         return utils.showToast.call(this, '亲输入正确的num值', 'error')
       }
       let params = Object.assign({}, this.form)
