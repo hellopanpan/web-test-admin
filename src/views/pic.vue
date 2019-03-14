@@ -34,6 +34,7 @@ import utils from '@/lib/utils'
 import * as api from "@/api"
 // const path = 'http://localhost:3001/images/'
 import path from '@/config'
+import { setTimeout } from 'timers';
 export default {
   name: 'pic',
   data() {
@@ -47,7 +48,9 @@ export default {
   }, 
   methods: {
     success() {
-      this.getList()
+      setTimeout(() => {
+        this.getList()
+      }, 500)
     },
     beforeAvatarUpload(file) {
       const isJPG = file.type === 'image/jpeg' || file.type === 'image/png';

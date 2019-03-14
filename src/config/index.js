@@ -1,4 +1,4 @@
 export default {
-  staticPath: location.protocol + '//' + location.host + '/images/',
-  static: location.protocol + '//' + location.host + '/images/'
+  staticPath: location.protocol + '//' + location.hostname + ':3001' + '/images/',
+  static: location.protocol + '//' + location.hostname + ':3001' + '/images/',
 }
